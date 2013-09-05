@@ -16,7 +16,8 @@ module Sunspot
       end
       
       def rescued_exception(method, e)
-        $stderr.puts("Exception in #{method}: #{e.message}")
+        # Commented out - too noisy. Sometimes we run without solr in dev / test.
+        # $stderr.puts("Exception in #{method}: #{e.message}")
       end
 
       SUPPORTED_METHODS = [
